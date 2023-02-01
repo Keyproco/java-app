@@ -5,7 +5,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class RestaurantController {
-    private final RestaurantService restaurantService= new RestaurantService();
+    private RestaurantService restaurantService = new RestaurantService();
+    
+    public RestaurantController(RestaurantService restaurantService) {
+        this.restaurantService = restaurantService;
+    }
 
     @GetMapping("/")
     Restaurant restaurant() {
