@@ -1,10 +1,11 @@
 package com.keyprolab.practice.restaurant;
 
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import java.util.Arrays;
 import java.util.List;
-@Component(value = "fake")
+@Repository(value = "fake")
 public class RestaurantFakeRepository implements RestaurantRepo {
     @Override
     public List<Restaurant> restaurants() {

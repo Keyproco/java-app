@@ -3,11 +3,12 @@ package com.keyprolab.practice.restaurant;
 
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-@Component
+@Repository
 @Primary
 public class RestaurantRepository implements  RestaurantRepo {
 
