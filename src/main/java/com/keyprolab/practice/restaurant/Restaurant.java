@@ -1,6 +1,10 @@
 package com.keyprolab.practice.restaurant;
 
-public class Restaurant {    private final Long id;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class Restaurant {
+
+    private final Long id;
     private final String name;
     private final String owner;
     private final String speciality;
@@ -21,10 +25,11 @@ public class Restaurant {    private final Long id;
         this.owner = owner;
         this.speciality = speciality;
     }
+    @JsonProperty("restaurant_id")
     public Long getId() {
         return id;
     }
-
+// to hide a property add @JsonIgnore
     public String getName() {
         return name;
     }
