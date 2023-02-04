@@ -12,7 +12,8 @@ public class RestaurantService {
     private final RestaurantRepo restaurantRepo;
 
     @Autowired
-    public RestaurantService(@Qualifier("fake") RestaurantRepo restaurantRepo) {
+    // if you want to use fake data @Qualifier("fake")
+    public RestaurantService(RestaurantRepo restaurantRepo) {
         this.restaurantRepo = restaurantRepo;
     }
 
