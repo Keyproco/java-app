@@ -9,7 +9,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 @Repository
-@Primary
+
 public class RestaurantRepository implements  RestaurantRepo {
 
     @Override
