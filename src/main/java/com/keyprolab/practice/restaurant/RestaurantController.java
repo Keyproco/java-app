@@ -19,16 +19,16 @@ public class RestaurantController {
         return  restaurantService.restaurants();
     }
 
-    @PostMapping
+    @PostMapping("/")
     void createNewRestaurant(@RequestBody Restaurant restaurant) {
         System.out.println("Restaurant created");
         System.out.println(restaurant);
     }
-    @PatchMapping
+    @PatchMapping("/")
     void updateRestaurant(@RequestBody Restaurant restaurant) {
 
     }
-    @DeleteMapping(path = "{restaurantId]")
+    @DeleteMapping(path = "{restaurantId}")
     void deleteRestaurant(@PathVariable("restaurantId") Long id) {
         System.out.println("Restaurant deleted");
         System.out.println(id);
