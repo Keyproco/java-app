@@ -4,6 +4,17 @@ public class Restaurant {    private final Long id;
     private final String name;
     private final String owner;
     private final String speciality;
+
+    @Override
+    public String toString() {
+        return "Restaurant{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", owner='" + owner + '\'' +
+                ", speciality='" + speciality + '\'' +
+                '}';
+    }
+
     Restaurant(Long id, String name, String owner, String speciality) {
         this.id = id;
         this.name = name;
