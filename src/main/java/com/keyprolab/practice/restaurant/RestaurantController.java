@@ -1,10 +1,7 @@
 package com.keyprolab.practice.restaurant;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -26,6 +23,11 @@ public class RestaurantController {
     void createNewRestaurant(@RequestBody Restaurant restaurant) {
         System.out.println("Restaurant created");
         System.out.println(restaurant);
+    }
+    @DeleteMapping(path = "{restaurantId]")
+    void deleteRestaurant(@PathVariable("restaurantId") Long id) {
+        System.out.println("Restaurant deleted");
+        System.out.println(id);
     }
 
 }
