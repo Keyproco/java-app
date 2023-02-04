@@ -24,6 +24,10 @@ public class RestaurantController {
         System.out.println("Restaurant created");
         System.out.println(restaurant);
     }
+    @PatchMapping
+    void updateRestaurant(@RequestBody Restaurant restaurant) {
+
+    }
     @DeleteMapping(path = "{restaurantId]")
     void deleteRestaurant(@PathVariable("restaurantId") Long id) {
         System.out.println("Restaurant deleted");
